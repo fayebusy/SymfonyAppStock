@@ -5,34 +5,35 @@
 	<body>
 
 		<div class="container-scroller">
-
 			{% block navbar %}
 				<!-- partial:partials/_navbar.html -->
-				{%include 'navbar.html.twig' %}
+				{% include 'navbar.html.twig' %}
 			{% endblock %}
 			<!-- partial -->
 			<div class="container-fluid page-body-wrapper {% block full %}{% endblock %}">
-				<!-- partial:partials/_settings-panel.html -->
-
-
-				<!-- partial -->
-				<!-- partial:partials/_sidebar.html -->
-					{% block sidebar %}
-				{% include 'sidebar.html.twig' %}
+				{% block sidebar %}
+					{% include 'sidebar.html.twig'%}
 				{% endblock %}
+
 				<!-- partial -->
-					
+				<div class="main-panel">
+					<div class="content-wrapper">
 						{% block bodyContent %}
 						{% endblock%}
-					
+					</div>
+					<!-- content-wrapper ends -->
+				<!-- partial:partials/_footer.html -->
+
+					<!-- partial -->
+				</div>
 				<!-- main-panel ends -->
 			</div>
 			<!-- page-body-wrapper ends -->
-
 		</div>
 		<!-- container-scroller -->
 
 		{% include 'foot.html.twig'%}</body>
 </html>
 {% include 'js.html.twig' %}
-{% block addjs %}{% endblock %}
+{% block addjs %}
+{% endblock %}
