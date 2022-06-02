@@ -3,7 +3,7 @@
 	{% include 'var.twig' %}
 	{% include  'head.html.twig' %}
 	<body>
-		
+
 		<div class="container-scroller">
 			{% block navbar %}
 				<!-- partial:partials/_navbar.html -->
@@ -335,21 +335,18 @@
 				<div class="main-panel">
 					<div class="content-wrapper">
 						{% block bodyContent %}
-							{% endblock%}
-						</div>
-						<!-- content-wrapper ends -->
-					<!-- partial:partials/_footer.html -->
-
-						<!-- partial -->
+						{% endblock%}
 					</div>
-					<!-- main-panel ends -->
+					<!-- content-wrapper ends -->
+				<!-- partial:partials/_footer.html -->
+
+					<!-- partial -->
 				</div>
-				<!-- page-body-wrapper ends -->
+				<!-- main-panel ends -->
 			</div>
-			<!-- container-scroller -->
-		
-		{% include 'foot.html.twig'%}
-	</body>
-</html>
-{% include 'js.html.twig' %}
-{% block addjs %}{% endblock %}
+			<!-- page-body-wrapper ends -->
+		</div>
+		<!-- container-scroller -->
+
+		{% include 'foot.html.twig'%}</body>
+</html></div></body></html>{% include 'js.html.twig' %}{% block addjs %}{% endblock %}
