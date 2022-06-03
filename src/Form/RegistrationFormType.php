@@ -70,8 +70,8 @@ class RegistrationFormType extends AbstractType
                     // adds a class like attending_yes, attending_no, etc
                     return ['class' => 'form-check-input'];
                 },
-                'row_attr'=> ['class'=>'row'],
-                'label_attr'=> ['class'=>'form-check-label col-md-6']
+                'row_attr' => ['class' => 'row'],
+                'label_attr' => ['class' => 'form-check-label col-md-6']
             ))
             ->add('agreeTerms', CheckboxType::class, [
                 'mapped' => false,
@@ -85,7 +85,7 @@ class RegistrationFormType extends AbstractType
                 // instead of being set onto the object directly,
                 // this is read and encoded in the controller
                 'mapped' => false,
-                'attr' => ['autocomplete' => 'new-password','class' => 'form-control'],
+                'attr' => ['autocomplete' => 'new-password', 'class' => 'form-control'],
                 'constraints' => [
                     new NotBlank([
                         'message' => 'Please enter a password',
@@ -104,8 +104,8 @@ class RegistrationFormType extends AbstractType
     {
         $resolver->setDefaults([
             'data_class' => User::class,
-            'attr'=>[
-                'class'=> 'form'
+            'attr' => [
+                'class' => 'form'
             ]
         ]);
     }

@@ -29,7 +29,10 @@ class RegistrationController extends AbstractController
                     $form->get('plainPassword')->getData()
                 )
             );
-
+            $user->setRoles($_POST['registration_form']['roles']) ;
+            var_dump ($user->getRoles());
+            // echo "----------------------------------------";
+            // var_dump ($user->getRoles());
             $entityManager->persist($user);
             $entityManager->flush();
             // do anything else you need here, like send an email
