@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ajout Categorie
+{% endblock %}
+
+{% block bodyContent %}
+	<div class="main-panel">
+		<div class="content-wrapper">
+			<div class="row">
+				<div class="col-12 grid-margin">
+					<div class="card">
+						<div class="card-body">
+							<h4 class="card-title">Ajouter un nouvel Entree</h4>
+							{{ form_start(entreeForm) }}
+							<p class="card-description">
+								Veuillez Replir les informations d'entree
+							</p>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group row">
+										<div class="col-sm-9">
+											{{ form_row(entreeForm.quantite) }}
+										</div>
+									</div>
+								</div>
+                                <div class="col-md-6">
+									<div class="form-group row">
+										<div class="col-sm-9">
+											{{ form_row(entreeForm.prix) }}
+										</div>
+									</div>
+								</div>
+							</div>
+                            <div class="row">
+								<div class="col-md-6">
+									<div class="form-group row">
+										<div class="col-sm-9">
+											{{ form_row(entreeForm.dateEntree) }}
+										</div>
+									</div>
+								</div>
+                                <div class="col-md-6">
+									<div class="form-group row">
+										<div class="col-sm-9">
+											{{ form_row(entreeForm.produit) }}
+										</div>
+									</div>
+								</div>
+							</div>
+							<button type="submit" class="btn btn-primary me-2">Submit</button>
+							{{ form_end(entreeForm) }}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
